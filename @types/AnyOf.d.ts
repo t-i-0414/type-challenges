@@ -20,7 +20,7 @@
 /* _____________ Your Code Here _____________ */
 
 type AnyOf<T extends any[]> = T extends [infer First, ...infer Rest]
-  ? First extends 0 | "" | "" | false | undefined | null | []
+  ? First extends 0 | "" | false | undefined | null | []
     ? AnyOf<Rest>
     : keyof First extends never
     ? AnyOf<Rest>
