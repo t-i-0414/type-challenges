@@ -22,7 +22,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type FirstOfArray<T extends any[]> = T extends [infer First, ...infer Rest]
+type FirstOfArray<T extends unknown[]> = T extends [infer First, ...infer Rest]
   ? First
   : never;
 
