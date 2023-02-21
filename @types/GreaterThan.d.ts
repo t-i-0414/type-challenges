@@ -28,7 +28,7 @@
 type GreaterThan<
   T extends number,
   U extends number,
-  R extends any[] = []
+  R extends unknown[] = []
 > = T extends R["length"]
   ? false
   : U extends R["length"]
