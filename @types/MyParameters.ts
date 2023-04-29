@@ -12,9 +12,9 @@
 
 /* _____________ Your Code Here _____________ */
 
-type MyParameters<T extends (...args: any[]) => any> = T extends (
+type MyParameters<T extends (...args: any[]) => unknown> = T extends (
   ...args: infer P
-) => any
+) => unknown
   ? P
   : never;
 

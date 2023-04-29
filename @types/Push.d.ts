@@ -18,7 +18,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Push<T extends any[], U> = [...T, U];
+type Push<T extends unknown[], U> = [...T, U];
 
 /* _____________ Test Cases _____________ */
 import { Equal, Expect, ExpectFalse, NotEqual } from "@type-challenges/utils";

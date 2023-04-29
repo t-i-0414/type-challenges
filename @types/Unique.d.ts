@@ -12,7 +12,7 @@
   type Res1 = Unique<[1, 2, 3, 4, 4, 5, 6, 7]>; // expected to be [1, 2, 3, 4, 5, 6, 7]
   type Res2 = Unique<[1, "a", 2, "b", 2, "a"]>; // expected to be [1, "a", 2, "b"]
   type Res3 = Unique<[string, number, 1, "a", 1, string, 2, "b", 2, number]>; // expected to be [string, number, 1, "a", 2, "b"]
-  type Res4 = Unique<[unknown, unknown, any, any, never, never]>; // expected to be [unknown, any, never]
+  type Res4 = Unique<[unknown, unknown, unknown, unknown, never, never]>; // expected to be [unknown, unknown, never]
   ```
 
   > View on GitHub: https://tsch.js.org/5360
@@ -20,7 +20,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Includes<T extends readonly any[], U> = T extends [
+type Includes<T extends readonly unknown[], U> = T extends [
   infer First,
   ...infer Rest
 ]
@@ -53,8 +53,8 @@ type cases = [
   >,
   Expect<
     Equal<
-      Unique<[unknown, unknown, any, any, never, never]>,
-      [unknown, any, never]
+      Unique<[unknown, unknown, unknown, unknown, never, never]>,
+      [unknown, unknown, never]
     >
   >
 ];

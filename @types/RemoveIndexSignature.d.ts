@@ -12,7 +12,7 @@
   ```
 
   type Foo = {
-    [key: string]: any;
+    [key: string]: unknown;
     foo(): void;
   }
 
@@ -33,12 +33,12 @@ type RemoveIndexSignature<T> = {
 import { Equal, Expect } from "@type-challenges/utils";
 
 type Foo = {
-  [key: string]: any;
+  [key: string]: unknown;
   foo(): void;
 };
 
 type Bar = {
-  [key: number]: any;
+  [key: number]: unknown;
   bar(): void;
 };
 

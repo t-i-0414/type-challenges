@@ -5,7 +5,7 @@
 
   ### Question
 
-  Implement Python liked `any` function in the type system. A type takes the Array and returns `true` if any element of the Array is true. If the Array is empty, return `false`.
+  Implement Python liked `unknown` function in the type system. A type takes the Array and returns `true` if unknown element of the Array is true. If the Array is empty, return `false`.
 
   For example:
 
@@ -19,7 +19,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type AnyOf<T extends any[]> = T extends [infer First, ...infer Rest]
+type AnyOf<T extends unknown[]> = T extends [infer First, ...infer Rest]
   ? First extends 0 | "" | false | undefined | null | []
     ? AnyOf<Rest>
     : keyof First extends never

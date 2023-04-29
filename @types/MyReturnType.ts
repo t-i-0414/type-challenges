@@ -1,4 +1,4 @@
-type MyReturnType<T extends (...args: any) => any> = T extends (
+type MyReturnType<T extends (...args: any) => unknown> = T extends (
   ...args: any
 ) => infer P
   ? P
@@ -24,7 +24,7 @@ type ComplexObject = {
 };
 
 const fn = (v: boolean) => (v ? 1 : 2);
-const fn1 = (v: boolean, w: any) => (v ? 1 : 2);
+const fn1 = (v: boolean, w: unknown) => (v ? 1 : 2);
 
 /* _____________ Further Steps _____________ */
 /*

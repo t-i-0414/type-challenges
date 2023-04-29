@@ -30,9 +30,9 @@
   }
   ```
 
-  You don't need to write any js/ts logic to handle the problem - just in type level.
+  You don't need to write unknown js/ts logic to handle the problem - just in type level.
 
-  You can assume that `key` only accepts `string` and the `value` can be anything - just leave it as-is. Same `key` won't be passed twice.
+  You can assume that `key` only accepts `string` and the `value` can be unknownthing - just leave it as-is. Same `key` won't be passed twice.
 
   > View on GitHub: https://tsch.js.org/12
 */

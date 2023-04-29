@@ -18,9 +18,9 @@
 
 /* _____________ Your Code Here _____________ */
 
-type UnionToIntersection<T> = (T extends any ? (_: T) => any : never) extends (
-  _: infer I
-) => any
+type UnionToIntersection<T> = (
+  T extends unknown ? (_: T) => unknown : never
+) extends (_: infer I) => unknown
   ? I
   : never;
 

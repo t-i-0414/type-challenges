@@ -63,7 +63,7 @@ type Decrease<T extends string> = StringToArr<T> extends [
 
 type StringToLenghtArr<
   T extends string,
-  Res extends any[] = []
+  Res extends unknown[] = []
 > = `${Res["length"]}` extends T ? Res : StringToLenghtArr<T, [...Res, 1]>;
 
 type PraseInt<

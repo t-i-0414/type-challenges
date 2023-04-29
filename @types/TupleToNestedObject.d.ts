@@ -20,7 +20,10 @@
 
 type TupleToNestedObject<T, U> = T extends [infer F, ...infer R]
   ? {
-      [K in F as F extends keyof any ? F : never]: TupleToNestedObject<R, U>;
+      [K in F as F extends keyof unknown ? F : never]: TupleToNestedObject<
+        R,
+        U
+      >;
     }
   : U;
 

@@ -1,15 +1,18 @@
 {
-  "private": true,
   "name": "type-challenges",
   "version": "1.0.0",
+  "private": true,
   "repository": "git@github.com:t-i-0414/type-challenges.git",
-  "author": "t-i-0414 <gutlo.ol0414@gmail.com>",
   "license": "UNLICENSED",
-  "devDependencies": {
-    "@type-challenges/utils": "^0.1.1"
+  "author": "t-i-0414 <gutlo.ol0414@gmail.com>",
+  "scripts": {
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@type-challenges/utils": "^0.1.1"
   },
   "packageManager": "yarn@3.2.4"
 }

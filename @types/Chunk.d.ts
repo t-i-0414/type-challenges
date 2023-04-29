@@ -20,9 +20,9 @@
 /* _____________ Your Code Here _____________ */
 
 type Chunk<
-  T extends any[],
+  T extends unknown[],
   N extends number,
-  Part extends any[] = []
+  Part extends unknown[] = []
 > = T extends [infer F, ...infer R]
   ? Part["length"] extends N
     ? [Part, ...Chunk<T, N>]

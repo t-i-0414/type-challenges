@@ -45,7 +45,7 @@ interface Transform {
 }
 
 // R extends { mapFrom: T[K], mapTo: infer To } -> handle "R: Transform2 | Transform2" situation, make sure we choose the right R and make anothor to be never
-type MapTypes<T extends Record<keyof any, unknown>, R extends Transform> = {
+type MapTypes<T extends Record<keyof unknown, unknown>, R extends Transform> = {
   [K in keyof T]: T[K] extends R["mapFrom"]
     ? R extends {
         mapFrom: T[K];

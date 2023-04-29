@@ -23,7 +23,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-declare function PromiseAll<T extends any[]>(
+declare function PromiseAll<T extends unknown[]>(
   values: readonly [...T]
 ): Promise<{ [K in keyof T]: T[K] extends Promise<infer U> ? U : T[K] }>;
 

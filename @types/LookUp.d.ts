@@ -17,7 +17,7 @@
 
   interface Dog {
     type: 'dog'
-    breeds: 'Hound' | 'Brittany' | 'Bulldog' | 'Boxer'
+    breeds: 'Hound' | 'Brittunknown' | 'Bulldog' | 'Boxer'
     color: 'brown' | 'white' | 'black'
   }
 
@@ -45,7 +45,7 @@ interface Cat {
 
 interface Dog {
   type: "dog";
-  breeds: "Hound" | "Brittany" | "Bulldog" | "Boxer";
+  breeds: "Hound" | "Brittunknown" | "Bulldog" | "Boxer";
   color: "brown" | "white" | "black";
 }
 

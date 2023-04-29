@@ -36,7 +36,7 @@ type cases = [
   // Cases where T resolves to a non-union type.
   Expect<Equal<IsUnion<string | never>, false>>,
   Expect<Equal<IsUnion<string | unknown>, false>>,
-  Expect<Equal<IsUnion<string | any>, false>>,
+  Expect<Equal<IsUnion<string | unknown>, false>>,
   Expect<Equal<IsUnion<string | "a">, false>>
 ];
 

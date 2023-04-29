@@ -20,7 +20,7 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Subsequence<T extends any[]> = T extends [infer First, ...infer Rest]
+type Subsequence<T extends unknown[]> = T extends [infer First, ...infer Rest]
   ? [First, ...Subsequence<Rest>] | Subsequence<Rest>
   : T;
 

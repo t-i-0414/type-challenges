@@ -18,7 +18,7 @@
 
 type Length2Array<
   L extends number,
-  A extends any[] = []
+  A extends unknown[] = []
 > = A["length"] extends L ? [...A] : Length2Array<L, [...A, A["length"]]>;
 
 type NumberRange<L extends number, H extends number> = Length2Array<H> extends [
