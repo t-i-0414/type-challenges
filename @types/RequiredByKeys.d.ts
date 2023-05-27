@@ -26,10 +26,7 @@
 */
 
 /* _____________ Your Code Here _____________ */
-type RequiredByKeys<T, K = keyof T> = Omit<
-  T & Required<Pick<T, K & keyof T>>,
-  never
->;
+type RequiredByKeys<T, K = keyof T> = T & Required<Pick<T, K & keyof T>>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from "@type-challenges/utils";
