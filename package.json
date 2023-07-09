@@ -6,13 +6,15 @@
   "license": "UNLICENSED",
   "author": "t-i-0414 <gutlo.ol0414@gmail.com>",
   "scripts": {
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "upgrade-interactive": "npm-check -u"
   },
   "dependencies": {
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
-    "@type-challenges/utils": "^0.1.1"
+    "@type-challenges/utils": "^0.1.1",
+    "npm-check": "^6.0.1"
   },
-  "packageManager": "yarn@3.2.4"
+  "packageManager": "pnpm@8.6.5"
 }
